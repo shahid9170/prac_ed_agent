@@ -98,6 +98,17 @@ Crucial Rules:
 - You must use the sales agent tools to generate the drafts — do not write them yourself.
 - You must send ONE email using the send_email tool — never more than one.
 """
+signature = """
+Best regards,
+Shahid Afridi
+Sales Manager, ComplAI
+AI-Powered SOC2 Compliance & Audit Prep
+shahid@complai.com | +91-XXXXXXXXXX | Delhi, India
+complai.com | linkedin.com/in/shahidafridi
+"""
+
+instructions += f"\n\nMANDATORY: End EVERY email with this EXACT signature (copy-paste as-is, no changes):\n{signature}"
+
 
 slaes_manager= Agent(name="sales_manger", instructions=instructions,tools=tools, model="gpt-4o-mini")
 message = "Send a cold sales email addressed to 'Dear CEO'"
